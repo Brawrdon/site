@@ -9,7 +9,7 @@
         <?php
             include 'includes/connect.php';
             include 'includes/navigation.php';
-            navigation(true, "nav-item", "nav-item", "nav-item", "nav-item");
+            navigation(true);
             $worksSQL = "SELECT work_title, work_url FROM works ORDER BY work_id DESC LIMIT 1";
             $worksResult = $connection->query($worksSQL);
 

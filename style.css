@@ -42,23 +42,17 @@ nav ul li {
     float: right;
 }
 
-.nav-item a, .active a, .brawrdon a {
+nav ul li a {
     color: #FFFFFF;
     display: inline-block;
     font-size: 24px;
     padding: 14px 26px;
     text-align: center;
     text-decoration: none;
-    border-bottom: 3px solid #564A7C;
 }
 
-.nav-item a:hover, .brawrdon a:hover {
-    border-bottom: 3px solid #3FC4BA;
-}
-
-.active a {
-    border-bottom: 3px solid #3FC4BA;
-
+nav ul li a:hover {
+    color: #3FC4BA;
 }
 
 .brawrdon {

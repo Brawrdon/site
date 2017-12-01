@@ -7,7 +7,7 @@
     <body>
         <?php
             include 'includes/navigation.php';
-            navigation(false, "active", "nav-item", "nav-item", "nav-item");
+            navigation(false);
 
         ?>
 
