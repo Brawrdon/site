@@ -17,46 +17,49 @@
             $postsResult = $connection->query($postsSQL);
         ?>
             <div class="home-jumbotron">
-                    <div class="first-section">
+                    <section class="first">
                         <div class="page-margin">
-                            <h1>Brandon Okeke</h1>
-                            <h2>Computer Science Undergraduate</h2>
+                            <div class="extra-padding">
+                                <div class="title">Brandon Okeke</div>
+                                <div class="subtitle">Computer Science Undergraduate</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="second-section">
+                    </section>
+                    <section class="second">
                         <div class="page-margin">
-                            <div class="half-one">
-                                <h2>Latest Work</h2>
-                                <span>
+                            <div class="extra-padding">
+                            <section class="half-one">
+                                <div class="subtitle">Latest Work</div>
+                                <div>
                                     <?php
                                         if($worksResult->num_rows > 0) {
                                             while($row = $worksResult->fetch_assoc()) {
                                     ?>
-                                    <a class="subtitle" href="<?php echo $row["work_url"];?>"><?php echo $row["work_title"]; ?></a>
+                                    <a class="post-title" href="<?php echo $row["work_url"];?>"><?php echo $row["work_title"]; ?></a>
                                     <?php
                                             }
                                         }
                                     ?>
-                                </span>
-                            </div>
-                            <div class="half-two">
-                                <h2>Latest Opinion</h2>
-                                <span>
+                                </div>
+                            </section>
+                            <section class="half-two">
+                                <div class="subtitle">Latest Opinion</div>
+                                <div>
                                     <?php
                                         if($postsResult->num_rows > 0) {
                                             while($row = $postsResult->fetch_assoc()) {
                                     ?>
                                     <!-- This needs to be changed to work when I have the blog post page set up-->
-                                    <a class="subtitle" href="#<?php echo $row["post_slug"];?>"><?php echo $row["post_title"]; ?></a>
+                                    <a class="post-title" href="#<?php echo $row["post_slug"];?>"><?php echo $row["post_title"]; ?></a>
                                     <?php
                                             }
                                         }
                                     ?>
-                                </span>
-                            </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
     </body>

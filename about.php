@@ -7,16 +7,19 @@
     <body>
         <?php
             include 'includes/navigation.php';
-            navigation(false, "nav-item", "nav-item", "nav-item", "nav-item");
+            navigation(false, "active", "nav-item", "nav-item", "nav-item");
 
         ?>
 
         <main>
-            <div class="jumbo">
-                <div class="page-margin">
-                    <h1>About</h1>
+            <div class="page-margin">
+
+                <div class="jumbo">
+                    <div class="extra-padding">
+                        <div class="subtitle page-title">About</div>
+                    </div>
                 </div>
             </div>
-    </main>
+        </main>
     </body>
 </html>
