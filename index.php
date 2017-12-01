@@ -3,19 +3,18 @@
     <head>
         <title>Brawrdon - Oh Boy</title>
         <?php include 'includes/header.php';?>
-        <?php  ?>
     </head>
     <body>
         <main>
         <?php
             include 'includes/connect.php';
             include 'includes/navigation.php';
+            navigation(true, "nav-item", "nav-item", "nav-item", "nav-item");
             $worksSQL = "SELECT work_title, work_url FROM works ORDER BY work_id DESC LIMIT 1";
             $worksResult = $connection->query($worksSQL);
 
             $postsSQL = "SELECT post_title, post_slug FROM posts ORDER BY post_id DESC LIMIT 1";
             $postsResult = $connection->query($postsSQL);
-            navigation(true, "nav-item", "nav-item", "nav-item", "nav-item");
         ?>
             <div class="home-jumbotron">
                     <div class="first-section">
