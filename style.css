@@ -49,15 +49,15 @@ nav ul li {
     padding: 14px 26px;
     text-align: center;
     text-decoration: none;
-    border-top: 3px solid #564A7C;
+    border-bottom: 3px solid #564A7C;
 }
 
 .nav-item a:hover, .brawrdon a:hover {
-    border-top: 3px solid #3FC4BA;
+    border-bottom: 3px solid #3FC4BA;
 }
 
 .active a {
-    border-top: 3px solid #3FC4BA;
+    border-bottom: 3px solid #3FC4BA;
 
 }
 
