@@ -6,6 +6,11 @@ body {
     font-size: 18px;
 }
 
+a {
+    text-decoration: none;
+        color: #3FC4BA;
+}
+
 .title, .subtitle, span {
     font-family: "Barlow", sans-serif;
     margin: 0;
@@ -140,12 +145,20 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.post {
+.post, aside {
     background-color: #FFFFFF;
-    width: 65%;
+    width: 68%;
     border-radius: 4px;
     margin: 50px 0;
     padding: 26px;
     overflow: hidden;
     line-height: 2;
+    float: left;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    margin: 50px 0;
+    padding: 0;
 }
