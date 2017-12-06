@@ -15,10 +15,24 @@ img {
     width: 100%;
 }
 
-.title, .subtitle, span {
+.title, .subtitle, span, h1 {
     font-family: "Barlow", sans-serif;
     margin: 0;
     font-weight: normal;
+}
+
+h1 {
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 3em;
+}
+
+
+h2 {
+    font-size: 1.75em;
+    font-family: "Space Mono", monospace;
+    text-decoration: none;
+    margin-top: 0px;
 }
 
 .title {
@@ -144,20 +158,21 @@ nav ul li a:hover {
     margin: 0 10%;
 }
 
-.page-title {
-    text-transform: lowercase;
-    text-align: center;
-}
-
 .post, aside {
     background-color: #FFFFFF;
     width: 68%;
     border-radius: 4px;
     margin: 50px 0;
-    padding: 26px;
     overflow: hidden;
-    line-height: 2;
     float: left;
+}
+
+.post-inner {
+    padding: 26px;
+}
+
+.post-content {
+    line-height: 2;
 }
 
 aside {
@@ -171,4 +186,11 @@ aside {
     width: 40%;
     float: right;
     border-radius: 4px;
+}
+
+.post-image-preview {
+    height: 325px;
+    overflow: hidden;
+    vertical-align: bottom;
+    background-size: cover;
 }

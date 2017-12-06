@@ -4,7 +4,7 @@
 ?>
         <nav>
             <ul class="page-margin">
-                <li><a href="#">blog</a></li>
+                <li><a href="blog.php">blog</a></li>
                 <li><a href="#">work</a></li>
                 <li><a href="about.php">about</a></li>
                 <?php
