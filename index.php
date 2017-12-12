@@ -54,6 +54,8 @@
                                     <?php
                                             }
                                         }
+
+                                        $connection = null;
                                     ?>
                                 </div>
                             </section>
