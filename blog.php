@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Brawrdon - Oh Boy</title>
+        <title>Blog - Brawrdon</title>
         <?php include 'includes/header.php';?>
     </head>
     <body>
