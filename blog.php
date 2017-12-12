@@ -34,7 +34,9 @@
                     </div>
                 </div>
 
-
+                <aside>
+                    <a class="twitter-timeline" data-height="700" data-dnt="true" data-link-color="#3FC4BA" href="https://twitter.com/Brawrdon?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </aside>
         <?php
                 for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                     $row = mysqli_fetch_assoc($result); ?>
@@ -58,9 +60,7 @@
             $connection = null;
         }
         ?>
-            <aside>
-                <a class="twitter-timeline" data-height="700" data-dnt="true" data-link-color="#3FC4BA" href="https://twitter.com/Brawrdon?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </aside>
+
         </div>
         </main>
     </body>
