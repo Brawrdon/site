@@ -9,7 +9,7 @@
         $page = $_GET['page'];
         // Put the variable you compare to after incase of the risk of reassignment
         if (null == $page || !is_numeric($page)) {
-            header("Location: blog.php?page=1");
+            header("Location: blog.php?page=1"); // should be 404 page
             die();
         } else {
             include 'includes/connect.php';
@@ -39,7 +39,7 @@
                 </aside>
         <?php
                 for ($i = 0; $i < mysqli_num_rows($result); $i++) {
-                    if($i > 2) {
+                    if ($i > 2) {
                         break;
                     }
                     $row = mysqli_fetch_assoc($result); ?>
@@ -77,6 +77,11 @@
                 } ?>
                 </div>
                 <?php
+            }
+
+            else {
+                header("Location: blog.php?page=1"); // should be 404 page
+                die();
             }
 
             $connection = null;
