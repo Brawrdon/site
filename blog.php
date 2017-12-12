@@ -17,8 +17,10 @@
             navigation(false);
 
             $limit_offset = ($page - 1) * 3;
-            $query = 'SELECT * FROM posts ORDER BY post_id DESC LIMIT ' . $limit_offset .', 4';
-            $result = $connection->query($query);
+            $query = $connection->prepare('SELECT * FROM posts ORDER BY post_id DESC LIMIT ?, 4');
+            $query->bind_param('i', $limit_offset);
+            $query->execute();
+            $result = $query->get_result();
 
             if (mysqli_num_rows($result) > 0) {
                 ?>
