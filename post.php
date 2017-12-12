@@ -36,7 +36,7 @@
                     </div>
                 </div>
 
-            <article class="post">
+            <article class="post-top">
                 <div class="post-image" style="background-image: url('blurry-story.jpg<?php // echo $row['post_image'];?>')"></div>
                 <section class="post-inner">
 
