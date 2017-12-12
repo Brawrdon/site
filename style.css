@@ -175,6 +175,20 @@ nav ul li a:hover {
     line-height: 2;
 }
 
+.read-more {
+    color: #FFFFFF;
+    background-color: #5899E2;
+    display: block;
+    padding: 22px;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.read-more:hover {
+    background-color: #1466C2;
+}
+
 aside {
     float: right;
     width: 25%;

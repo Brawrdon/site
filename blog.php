@@ -45,11 +45,8 @@
                     <div class="post-content">
                         <p><?php echo $row['post_preview']; ?></p>
                     </div>
-
-                    <div>
-                        <a href="<?php echo '/post/'.$row['post_slug']; ?>"><span class="read-more">Read more</span></a>
-                    </div>
                 </section>
+                <a href="<?php echo '/post.php?post='.$row['post_slug']; ?>"><span class="read-more">Read more</span></a>
             </article>
 
         <?php
