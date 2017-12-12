@@ -203,9 +203,14 @@ aside {
     padding: 0 0 5px 20px;
 }
 
-.post-image-preview {
+.post-image-preview, .post-image {
     height: 325px;
     overflow: hidden;
     vertical-align: bottom;
     background-size: cover;
+}
+
+
+.post-image {
+    height: 500px;
 }
