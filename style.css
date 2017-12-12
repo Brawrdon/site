@@ -158,13 +158,17 @@ nav ul li a:hover {
     margin: 0 10%;
 }
 
-.post, aside {
+.post, .post-top, aside {
     background-color: #FFFFFF;
     width: 73%;
     border-radius: 4px;
-    margin: 50px 0;
+    margin: 50px 0 0 0;
     overflow: hidden;
     float: left;
+}
+
+.post {
+    margin: 20px 0 0 0;
 }
 
 .post-inner {

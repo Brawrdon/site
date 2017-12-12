@@ -38,7 +38,7 @@
         <?php
                 for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                     $row = mysqli_fetch_assoc($result); ?>
-            <article class="post">
+            <article class="<?php if($i == 0) {?>post-top <?php } else {?>post<?php }?>">
                 <div class="post-image-preview" style="background-image: url('blurry-story.jpg<?php // echo $row['post_image'];?>')"></div>
                 <section class="post-inner">
 
