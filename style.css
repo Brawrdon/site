@@ -218,3 +218,48 @@ aside {
 .post-image {
     height: 500px;
 }
+
+.post-nav {
+    width: 73%;
+    margin: 40px 0;
+    overflow: hidden;
+    float: left;
+}
+
+.previous-page {
+    color: #FFFFFF;
+    float: left;
+    background-color: #5899E2;
+    display: block;
+    text-align: center;
+    width: 40%;
+    border-radius: 4px;
+}
+
+.previous-page span {
+    display: block;
+    padding: 22px;
+}
+
+.previous-page:hover {
+    background-color: #1466C2;
+}
+
+.next-page {
+    color: #FFFFFF;
+    float: right;
+    background-color: #5899E2;
+    display: block;
+    text-align: center;
+    width: 40%;
+    border-radius: 4px;
+}
+
+.next-page span {
+    display: block;
+    padding: 22px;
+}
+
+.next-page:hover {
+    background-color: #1466C2;
+}

@@ -39,8 +39,15 @@
                 </aside>
         <?php
                 for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                    if($i > 2) {
+                        break;
+                    }
                     $row = mysqli_fetch_assoc($result); ?>
-            <article class="<?php if($i == 0) {?>post-top <?php } else {?>post<?php }?>">
+                <article class="<?php if ($i == 0) {
+                        ?>post-top <?php
+                    } else {
+                        ?>post<?php
+                    } ?>">
                 <div class="post-image-preview" style="background-image: url('blurry-story.jpg<?php // echo $row['post_image'];?>')"></div>
                 <section class="post-inner">
 
@@ -54,7 +61,22 @@
             </article>
 
         <?php
-                }
+                } ?>
+                <div class="post-nav">
+            <?php
+                    if ($page != 1) {
+                        ?>
+                    <a href="blog.php?page=<?php echo $page - 1; ?>"><div class="previous-page"><span>Previous page</span></div></a>
+            <?php
+                    }
+
+                if (mysqli_num_rows($result) > 3) {
+                    ?>
+                    <a href="blog.php?page=<?php echo $page + 1; ?>"><div class="next-page"><span>Next page</span></div></a>
+            <?php
+                } ?>
+                </div>
+                <?php
             }
 
             $connection = null;
