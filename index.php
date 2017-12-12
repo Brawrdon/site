@@ -50,7 +50,7 @@
                                             while($row = $postsResult->fetch_assoc()) {
                                     ?>
                                     <!-- This needs to be changed to work when I have the blog post page set up-->
-                                    <a class="post-title" href="#<?php echo $row["post_slug"];?>"><?php echo $row["post_title"]; ?></a>
+                                    <a class="post-title" href="post.php?post=<?php echo $row["post_slug"];?>"><?php echo $row["post_title"]; ?></a>
                                     <?php
                                             }
                                         }
