@@ -22,6 +22,7 @@
         <?php
 
             include 'includes/navigation.php';
+            include 'includes/Parsedown.php';
             navigation(false);
 
             ?>
@@ -42,7 +43,10 @@
                     <h2><?php echo $row['post_title']; ?></h2>
 
                     <div class="post-content">
-                        <p><?php echo $row['post_content']; ?></p>
+                        <?php
+                            $Parsedown = new Parsedown();
+                            echo $Parsedown->text($row['post_content']);
+                        ?>
                     </div>
                 </section>
 
