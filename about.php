@@ -25,7 +25,18 @@
                 <article class="post-top">
                     <section class="post-inner post-content">
                         <img class="me" src="content/img/about/me.jpeg">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+                        <h2>Who am I?</h2>
+                        <p>
+                            I'm Brandon Okeke. I'm studying Computer Science at the University of Kent, currently in my second year. If you're looking for my CV, it's a good thing I've got a PDF version avialable right <a href="content/cv.pdf" target="_blank">here</a>. I never know what to write here so if you figure that out, let me know!
+                        </p>
+
+                        <h2>The Blog</h2>
+                        <p>
+                            This blog is just a space for me to write my opinions on topics I have, well opinions about. Mostly I'll be writing about the experiences I've had studying Computer Science, my views on the technology industry as a whole and my experiences dealing with mental health conditions. My secret aim is to write a post that day gets referenced in someone's work one day!
+                        </p>
+                        <p>
+                            Technically, this blog has been hand coded using HTML, CSS and PHP. Posts are saved in a MySQL databse and all posts content is generated dynamically. If you're interested in how the site is coded then you can check it out on my GitHub.
+                        </p>
                     </section>
                 </article>
 
