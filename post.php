@@ -3,8 +3,6 @@
     <head>
         <?php include 'includes/header.php';
         $post = $_GET['post'];
-        // Put the variable you compare to after incase of the risk of reassignment
-
             include 'includes/connect.php';
 
 
@@ -37,7 +35,7 @@
                 </div>
 
             <article class="post-top">
-                <div class="post-image" style="background-image: url('blurry-story.jpg<?php // echo $row['post_image'];?>')"></div>
+                <div class="post-image" style="background-image: url('<?php echo $row['post_image'];?>')"></div>
                 <section class="post-inner">
 
                     <h2><?php echo $row['post_title']; ?></h2>
@@ -58,7 +56,7 @@
     }
 
     else {
-        header("Location: blog.php?page=1");
+        header("Location: 404.php");
         die();
     }
 

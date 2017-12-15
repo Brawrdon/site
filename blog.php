@@ -9,7 +9,7 @@
         $page = $_GET['page'];
         // Put the variable you compare to after incase of the risk of reassignment
         if (null == $page || !is_numeric($page)) {
-            header("Location: blog.php?page=1"); // should be 404 page
+            header("Location: 404.php"); // should be 404 page
             die();
         } else {
             include 'includes/connect.php';
@@ -48,7 +48,7 @@
                     } else {
                         ?>post<?php
                     } ?>">
-                <div class="post-image-preview" style="background-image: url('blurry-story.jpg<?php // echo $row['post_image'];?>')"></div>
+                <div class="post-image-preview" style="background-image: url('<?php echo $row['post_image'];?>')"></div>
                 <section class="post-inner">
 
                     <h2><?php echo $row['post_title']; ?></h2>
@@ -80,7 +80,7 @@
             }
 
             else {
-                header("Location: blog.php?page=1"); // should be 404 page
+                header("Location: 404.php");
                 die();
             }
 
