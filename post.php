@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include 'includes/header.php';
+        <?php
         $post = $_GET['post'];
             include 'includes/connect.php';
-
-
             $query = $connection->prepare('SELECT post_title, post_image, post_content, post_tags, post_date FROM posts WHERE post_slug = ?');
             $query->bind_param('s', $post);
             $query->execute();
             $result = $query->get_result();
 
             if (mysqli_num_rows($result) > 0) {
-                    $row = mysqli_fetch_assoc($result);
-                ?>
+                include 'includes/header.php';
+                $row = mysqli_fetch_assoc($result); ?>
         <title><?php echo $row['post_title']; ?> - Brawrdon</title>
     </head>
     <body>
         <?php
 
             include 'includes/navigation.php';
-            include 'includes/Parsedown.php';
-            navigation(false);
-
-            ?>
+                include 'includes/Parsedown.php';
+                navigation(false); ?>
 
 
         <main>
@@ -35,7 +31,7 @@
                 </div>
 
             <article class="post-top">
-                <div class="post-image" style="background-image: url('<?php echo $row['post_image'];?>')"></div>
+                <div class="post-image" style="background-image: url('<?php echo $row['post_image']; ?>')"></div>
                 <section class="post-inner">
 
                     <h2><?php echo $row['post_title']; ?></h2>
@@ -43,8 +39,7 @@
                     <div class="post-content">
                         <?php
                             $Parsedown = new Parsedown();
-                            echo $Parsedown->text($row['post_content']);
-                        ?>
+                echo $Parsedown->text($row['post_content']); ?>
                     </div>
                 </section>
 
@@ -52,10 +47,7 @@
 
         <?php
         $connection = null;
-
-    }
-
-    else {
+            } else {
         header("Location: 404.php");
         die();
     }

@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Blog - Brawrdon</title>
-        <?php include 'includes/header.php';?>
-    </head>
-    <body>
         <?php
         $page = $_GET['page'];
-        // Put the variable you compare to after incase of the risk of reassignment
         if (null == $page || !is_numeric($page)) {
-            header("Location: 404.php"); // should be 404 page
+            header("Location: 404.php");
             die();
         } else {
             include 'includes/connect.php';
@@ -23,8 +18,10 @@
             $result = $query->get_result();
 
             if (mysqli_num_rows($result) > 0) {
-                ?>
-
+                include 'includes/header.php'; ?>
+        <title>Blog - Brawrdon</title>
+    </head>
+    <body>
 
         <main>
             <div class="page-margin">
@@ -48,7 +45,7 @@
                     } else {
                         ?>post<?php
                     } ?>">
-                <div class="post-image-preview" style="background-image: url('<?php echo $row['post_image'];?>')"></div>
+                <div class="post-image-preview" style="background-image: url('<?php echo $row['post_image']; ?>')"></div>
                 <section class="post-inner">
 
                     <h2><?php echo $row['post_title']; ?></h2>
@@ -70,22 +67,20 @@
             <?php
                     }
 
-                if (mysqli_num_rows($result) > 3) {
-                    ?>
+            if (mysqli_num_rows($result) > 3) {
+                ?>
                     <a href="blog.php?page=<?php echo $page + 1; ?>"><div class="next-page"><span>Next page</span></div></a>
             <?php
-                } ?>
+            } ?>
                 </div>
                 <?php
-            }
-
-            else {
-                header("Location: 404.php");
-                die();
-            }
-
-            $connection = null;
+        } else {
+            header("Location: 404.php");
+            die();
         }
+
+        $connection = null;
+    }
         ?>
 
         </div>
