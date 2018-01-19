@@ -1,7 +1,7 @@
 <?php
     $post = $_GET['post'];
     include 'includes/connect.php';
-    $query = $connection->prepare('SELECT post_title, post_image, post_content, post_tags, post_date FROM posts WHERE post_slug = ?');
+    $query = $connection->prepare('SELECT post_title, post_image, post_content, post_tags, post_date, post_type FROM posts WHERE post_slug = ?');
     $query->bind_param('s', $post);
     $query->execute();
     $result = $query->get_result();
@@ -24,7 +24,12 @@
             <div class="page-margin">
                 <div class="jumbo">
                     <div class="extra-padding">
+                        <?php if ($row['post_type'] == "b") { ?>
                         <h1>Blog</h1>
+                    <?php } else {?>
+                        <h1>Work</h1>
+                        <?php
+                        }?>
                     </div>
                 </div>
                 <aside>

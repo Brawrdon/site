@@ -2,7 +2,7 @@
 $page = $_GET['page'];
 include 'includes/connect.php';
 $limit_offset = ($page - 1) * 3;
-$query = $connection->prepare('SELECT * FROM posts WHERE post_type = "b" ORDER BY post_id DESC LIMIT ?, 4');
+$query = $connection->prepare('SELECT * FROM posts WHERE post_type = "w" ORDER BY post_id DESC LIMIT ?, 4');
 $query->bind_param('i', $limit_offset);
 $query->execute();
 $result = $query->get_result();
@@ -13,7 +13,7 @@ if (mysqli_num_rows($result) > 0) {
 <html>
     <head>
         <?php include 'includes/header.php'; ?>
-        <title>Blog - Brawrdon</title>
+        <title>Work - Brawrdon</title>
     </head>
     <body>
         <?php
@@ -23,12 +23,12 @@ if (mysqli_num_rows($result) > 0) {
             <div class="page-margin">
                 <div class="jumbo">
                     <div class="extra-padding">
-                        <h1>Blog</h1>
+                        <h1>Work</h1>
                     </div>
                 </div>
-                <!-- <aside>
+                <aside>
                     <a class="twitter-timeline" data-height="700" data-dnt="true" data-link-color="#3FC4BA" href="https://twitter.com/Brawrdon?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </aside> -->
+                </aside>
                 <?php
                     for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                         if ($i > 2) {
@@ -52,13 +52,13 @@ if (mysqli_num_rows($result) > 0) {
                     <?php
                         if ($page != 1) {
                     ?>
-                    <a href="blog.php?page=<?php echo $page - 1; ?>"><div class="previous-page"><span>Previous page</span></div></a>
+                    <a href="work.php?page=<?php echo $page - 1; ?>"><div class="previous-page"><span>Previous page</span></div></a>
                     <?php
                         }
 
                         if (mysqli_num_rows($result) > 3) {
                     ?>
-                    <a href="blog.php?page=<?php echo $page + 1; ?>"><div class="next-page"><span>Next page</span></div></a>
+                    <a href="work.php?page=<?php echo $page + 1; ?>"><div class="next-page"><span>Next page</span></div></a>
                 <?php } ?>
                 </div>
             </div>
