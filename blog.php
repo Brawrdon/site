@@ -26,9 +26,9 @@ if (mysqli_num_rows($result) > 0) {
                         <h1>Blog</h1>
                     </div>
                 </div>
-                <!-- <aside>
+                <aside>
                     <a class="twitter-timeline" data-height="700" data-dnt="true" data-link-color="#3FC4BA" href="https://twitter.com/Brawrdon?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </aside> -->
+                </aside>
                 <?php
                     for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                         if ($i > 2) {
