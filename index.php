@@ -65,5 +65,23 @@
                 </section>
             </div>
         </main>
+        <script>
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('message').value = 'Your message has been sent!';
+                } else {
+                    document.getElementById('message').value = 'There was a problem!';
+                }
+            };
+
+            document.addEventListener("submit", function (e) {
+                e.preventDefault();
+                var message = document.getElementById('message').value
+                request.open('POST', 'http://api.brawrdon.com/twitter/post/brawrdonbot', true);
+                request.setRequestHeader('Content-Type', 'application/json');
+                request.send(JSON.stringify({ message: message }));
+            });
+        </script>
     </body>
 </html>
