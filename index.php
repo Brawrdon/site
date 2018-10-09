@@ -22,6 +22,10 @@
                             <div class="extra-padding">
                                 <div class="title">Brandon Okeke</div>
                                 <div class="subtitle">Computer Science Undergraduate</div>
+                                <form id="send-message">
+                                    <input id="message" placeholder="Send me a message!" type="text">
+                                    <input id="submit" value="Send" type="submit">
+                                </form>
                             </div>
                         </div>
                     </section>
@@ -77,10 +81,25 @@
 
             document.addEventListener("submit", function (e) {
                 e.preventDefault();
-                var message = document.getElementById('message').value
-                request.open('POST', 'http://api.brawrdon.com/twitter/post/brawrdonbot', true);
-                request.setRequestHeader('Content-Type', 'application/json');
-                request.send(JSON.stringify({ message: message }));
+            var message = document.getElementById('message').value
+            request.open('POST', 'http://api.brawrdon.com/twitter/post/brawrdonbot', true);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.send(JSON.stringify({ message: message }));
+
+
+            var form = document.getElementById("send-message");
+            var allElements = form.elements;
+            for (var i = 0, l = allElements.length; i < l; ++i) {
+                allElements[i].disabled = true;
+            }
+
+            setTimeout(function () {
+                for (var i = 0, l = allElements.length; i < l; ++i) {
+                    // allElements[i].readOnly = true;
+                    allElements[i].disabled = false;
+                    document.getElementById('message').value = '';
+                }
+            }, 3000);
             });
         </script>
     </body>
