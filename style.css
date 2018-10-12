@@ -8,14 +8,17 @@ body {
 
 a {
     text-decoration: none;
-        color: #3FC4BA;
+    color: #3FC4BA;
 }
 
 img {
     width: 100%;
 }
 
-.title, .subtitle, span, h1 {
+.title,
+.subtitle,
+span,
+h1 {
     margin: 0;
     font-family: "Barlow", sans-serif;
     font-weight: normal;
@@ -37,11 +40,13 @@ h2 {
 
 .title {
     font-size: 4.5em;
+    color: #FFFFFF;
 }
 
 .subtitle {
     font-size: 3em;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    color: #FFFFFF;
 }
 
 
@@ -82,26 +87,14 @@ nav ul li a:hover {
     float: left;
 }
 
-nav ul li a:hover {
-}
+nav ul li a:hover {}
 
-.active {
-}
+.active {}
 
 .home-jumbotron {
     background-color: #564A7C;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    overflow: hidden;
-
 }
 
-.home-jumbotron div {
-    color: #FFFFFF;
-}
 
 .jumbo {
     padding: 50px 0;
@@ -118,18 +111,45 @@ nav ul li a:hover {
     padding-bottom: 160px;
 }
 
-.second {
-    padding-top: 50px;
-    background-color: #3FC4BA;
-    height: 100%;
+form {
+    display: flex
 }
 
-.extra-padding {
-    padding-left: 26px;
-    padding-right: 26px;
+input[type=text] {
+    padding: 0;
+    border: 0;
+    width: 75%;
+    border: 2px #3FC4BA33 solid;
+    background-color: #564A7C;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-right: 5px
 }
 
-.post-title, .post-title:visited {
+input[type=text]:focus {
+
+    border: 2px #3FC4BA solid;
+}
+
+input[type=submit] {
+    padding: 10px;
+    margin: 0;
+    width: 20%;
+    border-radius: 5px;
+    border: 2px solid #5899E2;
+    background-color: #5899E2;
+    color: white
+}
+
+input[type=submit]:hover {
+    border: 2px solid #1466C2;
+    background-color: #1466C2;
+}
+
+
+.post-title,
+.post-title:visited {
     color: #564A7C;
     font-size: 1.75em;
     font-family: "Space Mono", monospace;
@@ -141,24 +161,36 @@ nav ul li a:hover {
     border-bottom: 3px solid #564A7C;
 }
 
-.half-one, .half-two {
-    width: 45%;
-}
-
 .half-one {
-    float: left;
-    padding-right: 5%;
+    background-color: #3DBDB3;
 }
 
 .half-two {
-    float: right
+    background-color: #3FC4BA;
+}
+
+.half-one,
+.half-two {
+    width: 50%;
+    padding: 100px 0;
+}
+
+.flex {
+    display: flex;
 }
 
 .page-margin {
     margin: 0 10%;
 }
 
-.post, .post-top, aside {
+.page-margin-flex {
+    margin: 0 20%;
+}
+
+
+.post,
+.post-top,
+aside {
     background-color: #FFFFFF;
     width: 73%;
     border-radius: 4px;
@@ -207,7 +239,8 @@ aside {
     padding: 0 0 5px 20px;
 }
 
-.post-image-preview, .post-image {
+.post-image-preview,
+.post-image {
     height: 325px;
     overflow: hidden;
     vertical-align: bottom;

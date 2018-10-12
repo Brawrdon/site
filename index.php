@@ -19,16 +19,19 @@
             <div class="home-jumbotron">
                     <section class="first">
                         <div class="page-margin">
-                            <div class="extra-padding">
-                                <div class="title">Brandon Okeke</div>
-                                <div class="subtitle">Computer Science Undergraduate</div>
-                            </div>
+                            <div class="title">Brandon Okeke</div>
+                            <div class="subtitle">Computer Science Undergraduate</div>
+                            <form id="send-message">
+                                <input id="message" class="input" placeholder="Send me a message!" type="text">
+                                <input id="submit" value="Send" type="submit">
+                            </form>
                         </div>
                     </section>
                     <section class="second">
-                        <div class="page-margin">
-                            <div class="extra-padding">
+
+                            <div class="flex">
                                 <section class="half-one">
+                                <div class="page-margin-flex">
                                     <div class="subtitle">Latest Work</div>
                                     <div>
                                         <?php
@@ -43,8 +46,10 @@
                                             $connection = null;
                                         ?>
                                     </div>
+                                </div>
                                 </section>
                             <section class="half-two">
+                            <div class="page-margin-flex">
                                 <div class="subtitle">Latest Opinion</div>
                                 <div>
                                     <?php
@@ -59,29 +64,49 @@
                                         $connection = null;
                                     ?>
                                 </div>
+                            </div>
                             </section>
                         </div>
-                    </div>
                 </section>
             </div>
         </main>
         <script>
-            var request = new XMLHttpRequest();
-            request.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById('message').value = 'Your message has been sent!';
-                } else {
-                    document.getElementById('message').value = 'There was a problem!';
-                }
-            };
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById('message').value =
+                    'Your message has been sent! You can send another one in a sec.';
+            } else {
+                document.getElementById('message').value =
+                    'There was a problem! You can send another one in a sec.';
+            }
+        };
 
-            document.addEventListener("submit", function (e) {
-                e.preventDefault();
-                var message = document.getElementById('message').value
-                request.open('POST', 'http://api.brawrdon.com/twitter/post/brawrdonbot', true);
-                request.setRequestHeader('Content-Type', 'application/json');
-                request.send(JSON.stringify({ message: message }));
-            });
-        </script>
+        document.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var message = document.getElementById('message').value
+            request.open('POST', 'http://api.brawrdon.com/twitter/post/brawrdonbot', true);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.send(JSON.stringify({
+                message: message
+            }));
+
+
+            var form = document.getElementById("send-message");
+            var allElements = form.elements;
+            for (var i = 0, l = allElements.length; i < l; ++i) {
+                // allElements[i].readOnly = true;
+                allElements[i].disabled = true;
+            }
+
+            setTimeout(function () {
+                for (var i = 0, l = allElements.length; i < l; ++i) {
+                    // allElements[i].readOnly = true;
+                    allElements[i].disabled = false;
+                    document.getElementById('message').value = '';
+                }
+            }, 3000);
+        });
+    </script>
     </body>
 </html>
