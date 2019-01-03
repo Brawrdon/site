@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #564A7C;
+    text-align: right;
+}
+
+.container{
+    width: 75%;
+    max-width: 1200px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+nav ul li {
+    float: right;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 22px;
+    padding: 40px 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #3FC4BA;
+}
+
+.last-nav-item {
+    padding-right: 0;
+}
+
+.brawrdon {
+    float: left;
+}
+
+.brawrdon a {
+    padding-left: 0;
+}
