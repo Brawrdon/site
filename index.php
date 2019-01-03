@@ -23,7 +23,7 @@
                     <li><a href="">work</a></li>
                     <li><a href="">blog</a></li>
                     <li><a href="">about</a></li>
-                    <li class="brawrdon"><a href="/">brawrdon</a></li>
+                    <!-- <li class="brawrdon"><a href="/">brawrdon</a></li> -->
                 </ul>
             </nav>
         </div>
@@ -34,6 +34,16 @@
             <h2>Computer Science Undergraduate</h2>
         </div>
     </section>
-
+    <section class="brawrdobot">
+        <div class="container">
+            <h3>BrawrdonBot</h3>
+            <p class="section-text">A Twitter bot that turns your messages into works of art.</p>
+            <div class="row input">
+                <div class="nine columns"><input id="message" class="message-text u-full-width" placeholder="Enter your message here..." type="text" maxlength="280"></div>
+                <div class="three columns"><button id="send" class="button-primary u-full-width right">Send</button></div>
+            </div>
+            <p class="section-text small">(He doesn't do that just yet)</p>
+        </div>
+    </section>
 </body>
 </html>

@@ -8,7 +8,7 @@ header {
 }
 
 
-h1, h2 {
+h1, h2, h3 {
     color: #FFFFFF;
 }
 
@@ -17,9 +17,18 @@ h1 {
     margin-bottom: 1rem;
 }
 
-h2 {
+h2, h3 {
     font-size: 60px;
 }
+
+h3 {
+    font-weight: bold;
+}
+
+.right {
+    float: right;
+}
+
 
 .container{
     width: 80%;
@@ -63,10 +72,47 @@ nav ul li a:hover {
 }
 
 .brawrdon a {
-    padding-left: 4px;
+    padding-left: 5px;
 }
 
 .jumbotron {
     background-color: #564A7C;
     padding: 135px 0;
 }
+
+.brawrdobot {
+    background-color: #1DA1F2;
+    padding: 100px 0;
+}
+
+.section-text {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+
+.small {
+    font-size: 12px;
+}
+
+input[type="text"].message-text {
+    height: 60px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+button.button-primary {
+    height: 60px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #3FC4BA;
+    border-color: #3FC4BA;
+}
+
+button.button-primary:hover {
+    background-color: #3DBDB3;
+    border-color: #3DBDB3;
+}
+
