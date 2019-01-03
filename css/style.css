@@ -7,8 +7,22 @@ header {
     text-align: right;
 }
 
+
+h1, h2 {
+    color: #FFFFFF;
+}
+
+h1 {
+    font-size: 90px;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 60px;
+}
+
 .container{
-    width: 75%;
+    width: 80%;
     max-width: 1200px;
 }
 
@@ -30,7 +44,7 @@ nav ul li {
 nav ul li a {
     color: #FFFFFF;
     display: inline-block;
-    font-size: 22px;
+    font-size: 28px;
     padding: 40px 30px;
     text-align: center;
     text-decoration: none;
@@ -49,5 +63,10 @@ nav ul li a:hover {
 }
 
 .brawrdon a {
-    padding-left: 0;
+    padding-left: 4px;
+}
+
+.jumbotron {
+    background-color: #564A7C;
+    padding: 135px 0;
 }

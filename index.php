@@ -28,6 +28,12 @@
             </nav>
         </div>
     </header>
+    <section class="jumbotron">
+        <div class="container">
+            <h1>Brandon Okeke</h1>
+            <h2>Computer Science Undergraduate</h2>
+        </div>
+    </section>
 
 </body>
 </html>
