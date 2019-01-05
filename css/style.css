@@ -1,3 +1,7 @@
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -13,12 +17,12 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 9.0rem;
     margin-bottom: 1rem;
 }
 
 h2, h3 {
-    font-size: 60px;
+    font-size: 6.0rem;
 }
 
 h3 {
@@ -53,7 +57,7 @@ nav ul li {
 nav ul li a {
     color: #FFFFFF;
     display: inline-block;
-    font-size: 28px;
+    font-size: 2.8rem;
     padding: 40px 30px;
     text-align: center;
     text-decoration: none;
@@ -87,25 +91,28 @@ nav ul li a:hover {
 
 .section-text {
     color: #FFFFFF;
-    font-size: 40px;
+    font-size: 4.0rem;
 }
 
 
 .small {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
-input[type="text"].message-text {
+
+input[type="text"].message-text,
+button.button-primary {
     height: 60px;
-    font-size: 18px;
+    font-size: 1.8rem;
+
+}
+input[type="text"].message-text {
     border-radius: 10px;
     margin-bottom: 25px;
     padding: 0 20px;
 }
 
 button.button-primary {
-    height: 60px;
-    font-size: 18px;
     border-radius: 10px;
     background-color: #3FC4BA;
     border-color: #3FC4BA;
@@ -116,3 +123,28 @@ button.button-primary:hover {
     border-color: #3DBDB3;
 }
 
+
+/* Smaller than phablet */
+@media (max-width: 550px) {
+    h1 {
+        font-size: 8.0rem;
+    }
+
+    h2, h3 {
+        font-size: 4.0rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .section-text {
+        font-size: 3.0rem;
+    }
+
+    .small {
+        font-size: 1rem;
+    }
+
+
+}
