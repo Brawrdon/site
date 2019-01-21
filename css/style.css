@@ -12,16 +12,21 @@ header {
 }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #FFFFFF;
 }
 
 h1 {
     font-size: 9.0rem;
     margin-bottom: 1rem;
+    font-weight: normal;
+
 }
 
-h2, h3 {
+h2,
+h3 {
     font-size: 6.0rem;
 }
 
@@ -33,41 +38,35 @@ h3 {
     float: right;
 }
 
-
-.container{
+.container {
     width: 80%;
     max-width: 1200px;
 }
 
-
-nav ul {
-    list-style: none;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-
+.navbar-section {
+    justify-content: flex-end;
 }
 
-nav ul li {
-    float: right;
-    margin: 0;
-}
-
-nav ul li a {
+.navbar-item,
+.navbar-item:visited {
     color: #FFFFFF;
-    display: inline-block;
     font-size: 2.8rem;
-    padding: 40px 30px;
-    text-align: center;
+    padding: 40px 60px 40px 0;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+.navbar-item:hover {
     color: #3FC4BA;
+    text-decoration: none;
 }
 
-.last-nav-item {
+.navbar-item-center {
+    padding: 40px 60px;
+    font-size: 4rem;
+
+}
+
+.navbar-item-last {
     padding-right: 0;
 }
 
@@ -106,6 +105,7 @@ button.button-primary {
     font-size: 1.8rem;
 
 }
+
 input[type="text"].message-text {
     border-radius: 10px;
     margin-bottom: 25px;
@@ -130,7 +130,8 @@ button.button-primary:hover {
         font-size: 8.0rem;
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         font-size: 4.0rem;
     }
 
