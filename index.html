@@ -11,24 +11,28 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <section class="navbar-section">
-                    <a href="#" class="navbar-item">about</a>
-                    <a href="#" class="navbar-item">blog</a>
-                    <a href="#" class="navbar-item">work</a>
-                    <a href="#" class="navbar-item navbar-item-last">the big lists</a>
-                </section>
-            </nav>
-        </div>
-    </header>
-    <section class="jumbotron">
-        <div class="container">
-            <h1>Brandon Okeke</h1>
-            <h2>Computer Science Undergraduate</h2>
-        </div>
-    </section>
+    <div class="relative">
+        <div id="particles-js" class="animation_background"></div>
+
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <section class="navbar-section">
+                        <a href="#" class="navbar-item">about</a>
+                        <a href="#" class="navbar-item">blog</a>
+                        <a href="#" class="navbar-item">work</a>
+                        <a href="#" class="navbar-item navbar-item-last">the big lists</a>
+                    </section>
+                </nav>
+            </div>
+        </header>
+        <section class="jumbotron">
+            <div class="container">
+                <h1>Brandon Okeke</h1>
+                <h2>Computer Science Undergraduate</h2>
+            </div>
+        </section>
+    </div>
     <section class="brawrdobot">
         <div class="container">
             <h3>BrawrdonBot</h3>
@@ -37,7 +41,7 @@
                 <div class="column"> <input id="message" class="message-text form-input" placeholder="Enter your message here..."
                         type="text" maxlength="280"></div>
                 <div class="column col-auto">
-                    <button class="btn">Send</button>
+                    <button id="send" class="btn">Send</button>
                 </div>
             </div>
             <p class="section-text small">(He doesn't do that just yet)</p>
@@ -45,6 +49,10 @@
 
 
     </section>
+    <script src="js/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'js/particles.json');
+    </script>
     <script>
         let button = document.getElementById("send");
         let input = document.getElementById("message");

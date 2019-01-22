@@ -9,6 +9,7 @@ body {
 header {
     background-color: #4434B2;
     text-align: right;
+
 }
 
 
@@ -34,13 +35,11 @@ h3 {
     font-weight: bold;
 }
 
-.right {
-    float: right;
-}
 
 .container {
     width: 80%;
     max-width: 1200px;
+    position: relative;
 }
 
 .navbar-section {
@@ -81,6 +80,18 @@ h3 {
 
 .brawrdon a {
     padding-left: 5px;
+}
+
+
+.animation_background {
+    background-color: #4434B2;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .jumbotron {
@@ -132,6 +143,10 @@ input[type="text"].message-text {
 .btn:hover {
     background-color: #3146C9;
     border-color: #3146C9;
+}
+
+.relative {
+    position: relative;
 }
 
 
