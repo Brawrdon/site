@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #564A7C;
+    background-color: #4434B2;
     text-align: right;
 }
 
@@ -57,6 +57,11 @@ h3 {
 
 .navbar-item:hover {
     color: #3FC4BA;
+}
+
+.navbar-item:hover,
+.navbar-item:active,
+.navbar-item:focus {
     text-decoration: none;
 }
 
@@ -79,12 +84,12 @@ h3 {
 }
 
 .jumbotron {
-    background-color: #564A7C;
+    background-color: #4434B2;
     padding: 135px 0;
 }
 
 .brawrdobot {
-    background-color: #1DA1F2;
+    background-color: #D29475;
     padding: 100px 0;
 }
 
@@ -100,10 +105,9 @@ h3 {
 
 
 input[type="text"].message-text,
-button.button-primary {
+.btn {
     height: 60px;
     font-size: 1.8rem;
-
 }
 
 input[type="text"].message-text {
@@ -112,15 +116,22 @@ input[type="text"].message-text {
     padding: 0 20px;
 }
 
-button.button-primary {
-    border-radius: 10px;
-    background-color: #3FC4BA;
-    border-color: #3FC4BA;
+.form-input:focus {
+    border-color: #4434B2;
+    box-shadow: 0 0 0 .3rem rgba(87, 85, 217, .2);
 }
 
-button.button-primary:hover {
-    background-color: #3DBDB3;
-    border-color: #3DBDB3;
+.btn {
+    border-radius: 10px;
+    background-color: #2E69BF;
+    border-color: #2E69BF;
+    color: #FFFFFF;
+    padding: 10px 40px;
+}
+
+.btn:hover {
+    background-color: #3146C9;
+    border-color: #3146C9;
 }
 
 
