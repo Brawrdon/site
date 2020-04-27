@@ -6,7 +6,7 @@
 }
 
 :root {
-    --header-size: 2em;
+    --header-size: 2.5em;
     --nav-size: 3em;
     --font-family: "JetBrains Mono", sans-serif;
 }
@@ -31,14 +31,14 @@ h1 {
     padding: 0;
 }
 
-.content {
+.wrapper {
     margin: 2em 0;
 }
 
-.hero-content {
-    margin-right: 5em;
+.hero-heading {
+    background-color: rgba(147,112,219,0.2);
 }
 
-.home-image {
-    width: 100%;
+.hero-content p {
+    font-size: 1.15em;
 }
