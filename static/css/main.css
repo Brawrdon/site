@@ -1,0 +1,44 @@
+@import "chota/chota.css";
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff2/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+:root {
+    --header-size: 2em;
+    --nav-size: 3em;
+    --font-family: "JetBrains Mono", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+}
+.container {
+    margin: 1.5em auto;
+    padding: 0 2em;
+}
+
+h1 {
+    font-size: var(--header-size);
+    margin-top: 0;
+}
+
+.nav a, .nav .brand {
+    font-weight: bold;
+    color: black;
+    font-size: var(--nav-size);
+    padding: 0;
+}
+
+.content {
+    margin: 2em 0;
+}
+
+.hero-content {
+    margin-right: 5em;
+}
+
+.home-image {
+    width: 100%;
+}

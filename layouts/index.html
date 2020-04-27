@@ -1,0 +1,10 @@
+{{ define "content" }}
+<div class="row">
+    <div class="col-12 col-8-md">
+        <div class="hero-content">{{.Content}}</div>
+    </div>
+    <div class="col-12 col-4-md">
+        <div><img class="home-image" src="{{ index .Params.images 0}}"></div>
+    </div>
+</div>
+{{ end }}

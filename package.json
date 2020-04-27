@@ -1,0 +1,22 @@
+{
+  "name": "brawrdon.com",
+  "version": "1.0.0",
+  "description": "Website for Brawrdon.com",
+  "dependencies": {
+    "chota": "^0.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brawrdon/site.git"
+  },
+  "author": "Brawrdon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Brawrdon/site/issues"
+  },
+  "homepage": "https://github.com/Brawrdon/site#readme"
+}

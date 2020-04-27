@@ -1,0 +1,11 @@
+<nav class="nav">
+    <div class="nav-left">
+        <a href={{.Site.BaseURL}} class="brand">{{ lower .Site.Title}}</a>
+    </div>
+    <div class="nav-right">
+        {{ range $i, $el := .Site.RegularPages }}
+            <a href="{{ .Permalink}}">{{ lower .Title }}{{if $i}},{{end}}.</a>
+        {{ end }}
+        </ul>
+    </div>
+</nav>
