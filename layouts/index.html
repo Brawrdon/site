@@ -6,11 +6,16 @@
     <div class="col-12 col-6-lg ">{{ .Params.subheading | markdownify}}</div>
 </div>
 <div>
-{{ .Content }}
+    {{ .Content }}
 </div>
 <div class="row">
-{{ range .Params.images }}
-<div class="col-12 col-4-md"><img class="is-full-width" src="{{ . }}"></div>
-{{ end }}
+    {{$imageCredits := .Params.imageCredits }}
+    {{ range $index, $element := .Params.images }}
+    <div class="col-12 col-4-md"><img class="is-full-width" src="{{ $element }}">
+        {{ if ( gt ( len (index $imageCredits $index )) 0 ) }}
+        <div class="attribute">{{ index $imageCredits $index | markdownify}}</div>
+        {{ end }}
+    </div>
+    {{ end }}
 </div>
 {{ end }}
