@@ -1,14 +1,14 @@
 {{ define "content" }}
 <div class="row">
-    <div class="col-12 col-6-lg ">
-        <div class="hero-heading ">{{ .Params.heading | markdownify}}</div>
+    <div class="col-12 col-8-lg ">
+        <div class="hero-heading">{{ .Params.heading | markdownify }}</div>
     </div>
-    <div class="col-12 col-6-lg ">{{ .Params.subheading | markdownify}}</div>
+    <div class="col-8-md col-4-lg"><div class="hero-subheading">{{ .Params.subheading | markdownify}}</div></div>
+    <div class="is-full-width"></div>
 </div>
-<div>
-    {{ .Content }}
-</div>
-<div class="row">
+<div class="row content">
+    <div class="col-8-md">{{ .Content }}</div>
+    <div class="is-full-width"></div>
     {{$imageCredits := .Params.imageCredits }}
     {{ range $index, $element := .Params.images }}
     <div class="col-12 col-4-md"><img class="is-full-width" src="{{ $element }}">
