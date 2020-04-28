@@ -11,10 +11,13 @@
     <div class="is-full-width"></div>
     {{$imageCredits := .Params.imageCredits }}
     {{ range $index, $element := .Params.images }}
-    <div class="col-12 col-4-md"><img class="is-full-width" src="{{ $element }}">
+    <div class="col-12 col-4-md">
+        <div class="stick-note">
+        <img class="is-full-width" src="{{ $element }}">
         {{ if ( gt ( len (index $imageCredits $index )) 0 ) }}
         <div class="attribute">{{ index $imageCredits $index | markdownify}}</div>
         {{ end }}
+        </div>
     </div>
     {{ end }}
 </div>

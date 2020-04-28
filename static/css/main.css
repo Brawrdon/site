@@ -26,12 +26,17 @@ h1 {
 h2 {
     font-size: 1.3em;
 }
-.attribute a {
+
+a {
     text-decoration: none;
     border-bottom: 0.25rem solid black;
 }
 
-.attribute a:hover {
+a, a:visited {
+    color: #FD6888;
+}
+
+a:hover {
     color: var(--color-grey);
     text-decoration: none;
     border-bottom: 0;
@@ -40,7 +45,10 @@ h2 {
 .nav-left {
     display: inherit;
 }
+
 .nav a, .nav .brand {
+    text-decoration: none;
+    border-bottom: 0;
     font-weight: bold;
     color: black;
 }
@@ -56,7 +64,7 @@ h2 {
     font-size: 1em;
 }
 
-.nav a:hover {
+.nav a:hover, .nav a:active {
     text-decoration: underline black;
 }
 
@@ -65,15 +73,20 @@ h2 {
 }
 
 .hero-heading {
-    background-color: rgba(158,115,245,0.4);
+    background-color: rgba(158, 115, 245, 0.4);
 }
 
 .hero-subheading {
-    background-color: rgba(255,211,105,0.4);
+    background-color: rgba(255, 253, 105, 0.4);
 }
 
 .row.content {
     margin-top: 2em;
+}
+
+.stick-note {
+    background-color: rgba(101, 246, 160, 0.4);
+    padding: 10px;
 }
 @media screen and (max-width: 800px) {
     :root {
