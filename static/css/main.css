@@ -6,7 +6,8 @@
 }
 
 :root {
-    --header-size: 2.5em;
+    --heading-size: 2.5em;
+    --subheading-size: 1.5em;
     --font-family: "JetBrains Mono", sans-serif;
 }
 
@@ -19,12 +20,12 @@ body {
 }
 
 h1 {
-    font-size: var(--header-size);
+    font-size: var(--heading-size);
     margin-top: 0;
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: var(--subheading-size);
 }
 
 a {
@@ -33,7 +34,7 @@ a {
 }
 
 a, a:visited {
-    color: #FD6888;
+    color: rgb(246, 101, 187);
 }
 
 a:hover {
@@ -64,7 +65,7 @@ a:hover {
     font-size: 1em;
 }
 
-.nav a:hover, .nav a:active {
+.nav a:hover, .nav a:active, .nav a:focus {
     text-decoration: underline black;
 }
 
@@ -85,12 +86,14 @@ a:hover {
 }
 
 .stick-note {
-    background-color: rgba(101, 246, 160, 0.4);
+    background-color: rgba(101, 246, 160, 0.2);
     padding: 10px;
 }
 @media screen and (max-width: 800px) {
     :root {
         --nav-size: 1em;
+        --heading-size: 2em;
+        --subheading-size: 1.3em;
     }
 
 
