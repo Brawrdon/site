@@ -9,11 +9,14 @@
     --heading-size: 2.5em;
     --subheading-size: 1.5em;
     --font-family: "JetBrains Mono", sans-serif;
+    --link-colour: #BA2786;
+    --color-primary: #000000;
 }
 
 body {
     font-family: var(--font-family);
 }
+
 .container {
     margin: 1.5em auto;
     padding: 0 2em;
@@ -28,18 +31,13 @@ h2 {
     font-size: var(--subheading-size);
 }
 
-a {
-    text-decoration: none;
+a, a:visited, nav a{
     border-bottom: 0.25rem solid black;
-}
-
-a, a:visited {
-    color: rgb(246, 101, 187);
+    color: var(--link-colour);
 }
 
 a:hover {
-    color: var(--color-grey);
-    text-decoration: none;
+    color: var(--color-primary);
     border-bottom: 0;
 }
 
@@ -48,10 +46,9 @@ a:hover {
 }
 
 .nav a, .nav .brand {
-    text-decoration: none;
     border-bottom: 0;
     font-weight: bold;
-    color: black;
+    color: var(--link-colour);
 }
 
 .nav .brand {
@@ -65,7 +62,8 @@ a:hover {
     font-size: 1em;
 }
 
-.nav a:hover, .nav a:active, .nav a:focus {
+
+.underline {
     text-decoration: underline black;
 }
 
@@ -89,6 +87,7 @@ a:hover {
     background-color: rgba(101, 246, 160, 0.2);
     padding: 10px;
 }
+
 @media screen and (max-width: 800px) {
     :root {
         --nav-size: 1em;
