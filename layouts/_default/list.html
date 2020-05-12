@@ -1,5 +1,6 @@
 {{ define "content" }}
-  <section>
+<section class="row content">
+  <div class="col-12 col-8-lg">
     {{ range .Pages.ByWeight }}
     {{ $page := . }}
     <article>
@@ -11,5 +12,7 @@
       </p>
     </article>
     {{ end }} 
-  </section>
+  
+  </div>
+</section>
 {{ end }}
