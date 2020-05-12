@@ -1,5 +1,5 @@
 ---
-title: Things I did
+title: "Things I Did"
 menu: "main"
 weight: 3
 ---

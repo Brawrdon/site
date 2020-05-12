@@ -5,6 +5,7 @@
         <div class="container">
             {{ partial "nav" . }}
             <div class="wrapper">
+                {{if ne .Title "Home"}}<h1>{{.Title}}</h1>{{end}}
                 {{ block "content" . }}{{ end }}
             </div>
         </div>

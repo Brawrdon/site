@@ -9,7 +9,7 @@
     --heading-size: 2.5em;
     --subheading-size: 1.5em;
     --font-family: "JetBrains Mono", sans-serif;
-    --link-colour: #BA2786;
+    --link-colour: #6c27ba;
     --color-primary: #000000;
 }
 
@@ -29,6 +29,8 @@ h1 {
 
 h2 {
     font-size: var(--subheading-size);
+    margin-top: 0;
+    margin-bottom: 0.25em;
 }
 
 a, a:visited, nav a{
@@ -88,6 +90,10 @@ a:hover {
     padding: 10px;
 }
 
+.subtitle {
+    font-size: 0.75em;
+}
+
 @media screen and (max-width: 800px) {
     :root {
         --nav-size: 1em;
@@ -112,5 +118,4 @@ a:hover {
         -ms-flex-pack: center;
         justify-content: center;
     }
-
 }

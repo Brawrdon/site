@@ -1,5 +1,15 @@
 {{ define "content" }}
   <section>
-    This is a list page.
+    {{ range .Pages.ByWeight }}
+    {{ $page := . }}
+    <article>
+      <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+      <p class="subtitle">
+        {{ with .Params.startDate }}
+         {{.}} - {{ $page.Params.endDate}}
+        {{ end }}
+      </p>
+    </article>
+    {{ end }} 
   </section>
 {{ end }}
