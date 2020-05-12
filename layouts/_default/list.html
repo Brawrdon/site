@@ -3,7 +3,7 @@
     {{ range .Pages.ByWeight }}
     {{ $page := . }}
     <article>
-      <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+        <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
       <p class="subtitle">
         {{ with .Params.startDate }}
          {{.}} - {{ $page.Params.endDate}}

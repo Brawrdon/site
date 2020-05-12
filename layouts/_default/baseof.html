@@ -4,8 +4,13 @@
     <body>
         <div class="container">
             {{ partial "nav" . }}
-            <div class="wrapper">
-                {{if ne .Title "Home"}}<h1>{{.Title}}</h1>{{end}}
+                {{if ne .Title "Home"}}
+                <div class="row">
+                    <div class="col-12 col-8-lg">
+                        <div class="sticky-note-purple"><h1>{{.Title}}</h1></div>
+                    </div>
+                </div>
+                {{end}}
                 {{ block "content" . }}{{ end }}
             </div>
         </div>

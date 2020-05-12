@@ -29,7 +29,6 @@ h1 {
 
 h2 {
     font-size: var(--subheading-size);
-    margin-top: 0;
     margin-bottom: 0.25em;
 }
 
@@ -69,20 +68,12 @@ a:hover {
     text-decoration: underline black;
 }
 
-.wrapper {
-    margin: 2em 0;
-}
-
-.hero-heading {
+.sticky-note-purple {
     background-color: rgba(158, 115, 245, 0.4);
 }
 
-.hero-subheading {
+.sticky-note-yellow {
     background-color: rgba(255, 253, 105, 0.4);
-}
-
-.row.content {
-    margin-top: 2em;
 }
 
 .stick-note {
@@ -92,6 +83,10 @@ a:hover {
 
 .subtitle {
     font-size: 0.75em;
+}
+
+.row {
+    margin-top: 2em;
 }
 
 @media screen and (max-width: 800px) {
