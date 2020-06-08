@@ -3,6 +3,7 @@
         <a href={{.Site.BaseURL}} class="brand">{{ lower .Site.Title}}</a>
     </div>
     <div class="nav-right">
+        <ul>
         {{ range .Site.RegularPages.ByWeight }}
             <a href="{{ .Permalink}}">{{ lower .Title }}</a>
         {{ end }}
